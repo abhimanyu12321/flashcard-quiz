@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/flashcard-quiz/static/css/main.0ca69cea.css",
-    "main.js": "/flashcard-quiz/static/js/main.018a47a3.js",
+    "main.css": "/flashcard-quiz/static/css/main.a61692bf.css",
+    "main.js": "/flashcard-quiz/static/js/main.9c625d27.js",
     "index.html": "/flashcard-quiz/index.html",
-    "main.0ca69cea.css.map": "/flashcard-quiz/static/css/main.0ca69cea.css.map",
-    "main.018a47a3.js.map": "/flashcard-quiz/static/js/main.018a47a3.js.map"
+    "main.a61692bf.css.map": "/flashcard-quiz/static/css/main.a61692bf.css.map",
+    "main.9c625d27.js.map": "/flashcard-quiz/static/js/main.9c625d27.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ca69cea.css",
-    "static/js/main.018a47a3.js"
+    "static/css/main.a61692bf.css",
+    "static/js/main.9c625d27.js"
   ]
 }
