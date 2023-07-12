@@ -18,40 +18,38 @@ function App() {
       })
   }, [])
 
-  useEffect(() => {
-   
-  }, [])
+
 
   function decodeString(str) {
     const textArea = document.createElement('textarea')
-    textArea.innerHTML= str
+    textArea.innerHTML = str
     return textArea.value
   }
 
   function handleSubmit(e) {
     e.preventDefault()
     axios
-    .get('https://opentdb.com/api.php', {
-      params: {
-        amount: amountEl.current.value,
-        category: categoryEl.current.value
-      }
-    })
-    .then(res => {
-      setFlashcards(res.data.results.map((questionItem, index) => {
-        const answer = decodeString(questionItem.correct_answer)
-        const options = [
-          ...questionItem.incorrect_answers.map(a => decodeString(a)),
-          answer
-        ]
-        return {
-          id: `${index}-${Date.now()}`,
-          question: decodeString(questionItem.question),
-          answer: answer,
-          options: options.sort(() => Math.random() - .5)
+      .get('https://opentdb.com/api.php', {
+        params: {
+          amount: amountEl.current.value,
+          category: categoryEl.current.value
         }
-      }))
-    })
+      })
+      .then(res => {
+        setFlashcards(res.data.results.map((questionItem, index) => {
+          const answer = decodeString(questionItem.correct_answer)
+          const options = [
+            ...questionItem.incorrect_answers.map(a => decodeString(a)),
+            answer
+          ]
+          return {
+            id: `${index}-${Date.now()}`,
+            question: decodeString(questionItem.question),
+            answer: answer,
+            options: options.sort(() => Math.random() - .5)
+          }
+        }))
+      })
   }
 
   return (
